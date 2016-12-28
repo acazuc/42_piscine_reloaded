@@ -6,7 +6,7 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/28 16:42:36 by acazuc            #+#    #+#              #
-#    Updated: 2016/12/28 17:12:53 by acazuc           ###   ########.fr        #
+#    Updated: 2016/12/28 17:12:47 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,29 +14,21 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-NAME = libft.a
+NAME = ft_display_file
 
-SRCS_NAME = ft_putchar.c \
-	   ft_putstr.c \
-	   ft_strcmp.c \
-	   ft_strlen.c \
-	   ft_swap.c \
-
-SRCS_PATH = srcs/
+SRCS_NAME = main.c \
 
 SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
 
 OBJS = $(SRCS:.c=.o)
 
-INCLUDES = includes/
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $(NAME) $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $< -I $(INCLUDES)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS)
