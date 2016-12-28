@@ -6,16 +6,16 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/28 16:17:29 by acazuc            #+#    #+#             */
-/*   Updated: 2016/12/28 16:18:42 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/12/28 17:33:22 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 && *s2)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
 		++s1;
 		++s2;
 	}
-	return (*s1 - *s2);
+	return (*((unsigned char*)s1) - *((unsigned char*)s2));
 }

@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/28 16:20:51 by acazuc            #+#    #+#             */
-/*   Updated: 2016/12/28 16:30:15 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/12/28 17:34:31 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ void	ft_putchar(char c);
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 && *s2)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
 		++s1;
 		++s2;

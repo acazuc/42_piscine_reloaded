@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/28 16:09:43 by acazuc            #+#    #+#             */
-/*   Updated: 2016/12/28 16:11:55 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/12/28 18:07:19 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@ int		ft_sqrt(int nb)
 {
 	int		i;
 
+	if (nb == 1)
+		return (1);
 	i = 1;
 	if (nb <= 0)
 		return (0);
 	while (i * i < nb)
 	{
-		i += 2;
+		++i;
 	}
 	return (i * i == nb ? i : 0);
 }

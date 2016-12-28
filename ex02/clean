@@ -1,1 +1,1 @@
-find . -name \*~ -o -name \#\*\# -exec cat '{}' \; -exec rm -f '{}' \;
+find . -type f \( -name \*\~ -or -name \#\*\# \) -exec echo '{}' \; -exec rm -f '{}' \;
